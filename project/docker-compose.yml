@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && ./start.sh"
+  db:
+    image: mongo:latest
+    container_name: mongodatabase
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo_data:/data/db   # Mapeamento do volume com permissões
+    hostname: test_mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password  
+    command: ["mongod", "--bind_ip_all"]
