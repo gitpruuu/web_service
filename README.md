@@ -16,9 +16,9 @@ Instalação
    cd tex_test
 
 2. Crie um ambiente virtual e ative-o:
-
-   python3 -m venv venv
-   source venv/bin/activate
+   comando para Linux: python3 -m venv venv
+   
+   Ative o ambiente virtual: source venv/bin/activate
 
 3. Instale as dependências:
 
@@ -27,22 +27,10 @@ Instalação
 Uso
 
 1. Construa e inicie o ambiente Docker:
+   No doretório raiz do projeto existe um arquivo chamado start.sh, basta executa lo
+   ./start.sh
 
-   docker-compose up -d
-
-2. Acesse o shell do contêiner (opcional):
-
-   docker-compose exec web bash
-
-3. Execute as migrações (caso necessário):
-
-   python manage.py migrate
-
-4. Crie um superusuário (caso necessário):
-
-   python manage.py createsuperuser
-
-5. Acesse os endpoints:
+2. Acesse os endpoints:
 
    - Consultar CEP: http://127.0.0.1:8000/consulta-cep/CEP_AQUI/
    - Cadastrar Pessoa: http://127.0.0.1:8000/cadastrar-pessoa/
@@ -52,6 +40,7 @@ Uso
 
 
    Substitua CEP_AQUI pelo CEP real que deseja consultar.
+   Substitua id_pessoa pelo id real que deseja alterar.
 
 Notas
 ## Cadastrar Pessoa
@@ -67,6 +56,3 @@ Para cadastrar uma nova pessoa na base, você pode fazer uma solicitação POST 
 Autor
 
 [Johnatan Souza]
-
-Licença
-
