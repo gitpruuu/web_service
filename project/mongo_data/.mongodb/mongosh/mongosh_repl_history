@@ -1,8 +1,0 @@
-show dbs
-exit
-show dbs
-mongo
-mongosh -u root -p password
-mongosh -u root -p passwrod
-show dbs -u root -p password
-show dbs
