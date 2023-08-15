@@ -29,21 +29,20 @@ Instalação
 
    pip3 install -r requirements.txt
 
-4. Execute o ambiente Docker:
+4. Prepare o ambiente:
 
-   **Nota:** Para executar o ambiente Docker no Windows, siga as instruções abaixo para executar o script `start.sh`.
+    Para executar o ambiente Docker no Windows, siga as instruções abaixo para executar o script `start.sh`.
 
-   - Instale o Git Bash ou o Cygwin (ambos têm suporte a scripts `.sh`).
+   - Construa a imagem com o comando abaixo:
+      docker-compose build
+   - Execute a imagem:
+      docker-compose up
+   - Por fim execute o comando:
+      python3 manage.py runserver
+   
+   **Nota:** assegure de estar no diretorio raiz onde estão os arquivo manage.py e Dockerfile
 
-   - Abra o Git Bash ou o terminal do Cygwin.
-
-   - Navegue até a pasta do projeto onde está localizado o arquivo `start.sh`.
-
-   - Execute o seguinte comando:
-
-     ```
-     ./start.sh
-     ```
+    ```
 
 Uso
 
