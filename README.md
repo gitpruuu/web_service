@@ -27,7 +27,7 @@ Instalação
 
 3. Instale as dependências:
 
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
 
 4. Execute o ambiente Docker:
 
@@ -57,6 +57,10 @@ Uso
 
    Substitua CEP_AQUI pelo CEP real que deseja consultar.
    Substitua id_pessoa pelo id real da pessoa que deseja consultar ou excluir.
+
+   **Nota:**
+
+      - Em caso de erro verifique se possui o mongodb instalado localmente e execute o comando: sudo systemctl start mongod.service
 
 Notas
 
